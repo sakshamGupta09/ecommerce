@@ -2,18 +2,14 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: 'products',
+    path: 'layout',
     loadComponent: () =>
-      import('./products/products-listing/products-listing.component').then(
-        (m) => m.ProductsListingComponent
-      ),
+      import('./layout/layout/layout.component').then((m) => m.LayoutComponent),
+    loadChildren: () =>
+      import('./routes/application-routes').then((m) => m.APPLICATION_ROUTES),
   },
-  {
-    path: 'cart',
-    loadComponent: () =>
-      import('./cart/cart/cart.component').then((m) => m.CartComponent),
-  },
-  { path: '', redirectTo: '/products', pathMatch: 'full' },
+
+  { path: '', redirectTo: '/layout/products', pathMatch: 'full' },
   {
     path: '**',
     loadComponent: () =>
