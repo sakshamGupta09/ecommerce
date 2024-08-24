@@ -4,6 +4,7 @@
   display: grid;
   grid-template-columns: 1fr 1px 1fr 1px 1fr;
   height: 2rem;
+  width: 14rem;
 }
 
 .cart-btn {
@@ -20,7 +21,5 @@
 }
 
 .line {
-  height: 100%;
-  width: 1px;
-  border: 1px solid #d4d5d9;
+  border-right: 1px solid #d4d5d9;
 }

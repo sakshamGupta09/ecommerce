@@ -10,9 +10,10 @@
 
 .product__image-container {
   padding: 0.5rem;
-  height: 7rem;
-  width: 7rem;
+  height: 9rem;
+  width: 9rem;
   border-radius: 0.25rem;
+  background: #ecececb3;
 }
 
 .product__image {
