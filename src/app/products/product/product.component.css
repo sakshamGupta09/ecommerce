@@ -1,0 +1,16 @@
+.product {
+  border: 1px solid #0000001a;
+  border-radius: 0.25rem;
+
+  .product__image-container {
+    background: #ecececb3;
+    padding: 0.5rem;
+    height: 15rem;
+  }
+
+  .product__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}

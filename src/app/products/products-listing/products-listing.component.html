@@ -1,1 +1,7 @@
-<p>products-listing works!</p>
+<section class="products">
+  @for (product of products(); track product.id) {
+  <app-product [product]="product" />
+  } @empty { @if (!isLoading()) {
+  <app-no-products />
+  } }
+</section>

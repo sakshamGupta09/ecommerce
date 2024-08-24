@@ -1,5 +1,13 @@
 @import url("../public/assets/styles/utilities.css");
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   font-size: 100%;
 }
@@ -9,5 +17,5 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
   color: #282c3f;
-  background: whitesmoke;
+  background: white;
 }

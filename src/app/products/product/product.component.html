@@ -1,1 +1,18 @@
-<p>product works!</p>
+<div class="product bg-white mt-4">
+  <div class="product__image-container">
+    <img
+      [src]="product().image"
+      [alt]="product().name"
+      class="product__image"
+    />
+  </div>
+  <div class="product__details px-2">
+    <p class="font-medium text-lg truncate">{{ product().name }}</p>
+    <p class="text-base text-gray font-normal mt-2 truncate">
+      {{ product().description }}
+    </p>
+    <p class="text-lg mt-3">{{ product().price | currency : "INR" }}</p>
+
+    <button class="mt-3 btn">Add to cart</button>
+  </div>
+</div>

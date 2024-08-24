@@ -1,0 +1,68 @@
+import { IProduct } from '../app/models/product';
+
+export const PRODUCTS: IProduct[] = [
+  {
+    id: 1,
+    name: 'ColorFit Qube Plus',
+    description: 'AMOLED Display | 4G Calling',
+    price: 4999,
+    image: '/assets/images/watch2.webp',
+    quantity: 0,
+  },
+  {
+    id: 2,
+    name: 'Aura Buds',
+    description: '60H Playtime | Dual Pairing',
+    price: 1599,
+    image: '/assets/images/earphone2.webp',
+    quantity: 1,
+  },
+  {
+    id: 3,
+    name: 'NoiseFit Diva',
+    description: 'AMOLED Display | Diamond Dial',
+    price: 4999,
+    image: '/assets/images/watch3.webp',
+    quantity: 1,
+  },
+  {
+    id: 4,
+    name: 'Buds X Prime',
+    description: '120H Playtime | Quad Mic',
+    price: 1799,
+    image: '/assets/images/earphone3.webp',
+    quantity: 1,
+  },
+  {
+    id: 5,
+    name: 'ColorFit Pulse 2 Pro',
+    description: '500 Nits | 1.8" display',
+    price: 3499,
+    image: '/assets/images/watch4.webp',
+    quantity: 1,
+  },
+  {
+    id: 6,
+    name: 'Evolve 2 Play',
+    description: 'Circular Display | Noise OS',
+    price: 2499,
+    image: '/assets/images/watch5.webp',
+    quantity: 2,
+  },
+  {
+    id: 7,
+    name: 'Buds VS404 With ENC',
+    description: '50H Playtime | Quad Mic',
+    price: 999,
+    image: '/assets/images/earphone1.webp',
+    quantity: 1,
+  },
+  {
+    id: 8,
+    name: 'NoiseFit Voyage',
+    description: 'AMOLED Display | 4G Calling',
+    price: 12999,
+    image: '/assets/images/watch1.webp',
+    quantity: 1,
+  },
+];
