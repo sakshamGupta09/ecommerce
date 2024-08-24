@@ -14,6 +14,13 @@ export const APPLICATION_ROUTES: Routes = [
       import('../cart/cart/cart.component').then((m) => m.CartComponent),
   },
   {
+    path: 'order-completed',
+    loadComponent: () =>
+      import(
+        '../order-completed/order-completed/order-completed.component'
+      ).then((m) => m.OrderCompletedComponent),
+  },
+  {
     path: '',
     redirectTo: '/products',
     pathMatch: 'full',
