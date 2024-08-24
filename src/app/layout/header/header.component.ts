@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { BadgeComponent } from '../../shared/badge/badge.component';
+import { ShoppingService } from '../../services/shopping.service';
 
 @Component({
   selector: 'app-header',
@@ -9,4 +10,8 @@ import { BadgeComponent } from '../../shared/badge/badge.component';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  public cartItemsCount = this.service.getCartItemsCount();
+
+  constructor(private service: ShoppingService) {}
+}

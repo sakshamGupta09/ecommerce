@@ -1,6 +1,7 @@
 import { Component, input } from '@angular/core';
 import { IProduct } from '../../models/product';
 import { CurrencyPipe } from '@angular/common';
+import { ShoppingService } from '../../services/shopping.service';
 
 @Component({
   selector: 'app-product',
@@ -11,4 +12,10 @@ import { CurrencyPipe } from '@angular/common';
 })
 export class ProductComponent {
   public product = input.required<IProduct>();
+
+  constructor(private service: ShoppingService) {}
+
+  public addtoCartHandler(): void {
+    this.service.addProduct(this.product());
+  }
 }

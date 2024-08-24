@@ -14,3 +14,7 @@
     object-fit: contain;
   }
 }
+
+.product:hover {
+  border-color: #0000005f;
+}
