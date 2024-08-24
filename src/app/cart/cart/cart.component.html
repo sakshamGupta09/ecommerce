@@ -2,30 +2,40 @@
 <!-- Empty cart -->
 <app-empty-cart />
 } @else {
-<section class="px-2">
-  @for (product of cartItems(); track product.id) {
-  <div class="product flex gap-2">
-    <div class="product__image-container">
-      <img [src]="product.image" [alt]="product.name" class="product__image" />
-    </div>
-    <div class="product__details">
-      <p class="font-medium text-lg truncate">{{ product.name }}</p>
-      <p class="text-base text-gray font-normal mt-2 truncate">
-        {{ product.description }}
-      </p>
-      <div class="mt-2">
-        <app-modify-quantity
-          [quantity]="product.quantity"
-          (increment)="incrementHandler(product)"
-          (decrement)="decrementHandler(product)"
+<section class="container mt-2">
+  <div>
+    @for (product of cartItems(); track product.id) {
+    <div class="product flex gap-2">
+      <div class="product__image-container">
+        <img
+          [src]="product.image"
+          [alt]="product.name"
+          class="product__image"
         />
       </div>
-      <p class="text-base mt-3">
-        {{ product.price * product.quantity | currency : "INR" }}
-      </p>
+      <div class="product__details">
+        <p class="font-medium text-lg truncate">{{ product.name }}</p>
+        <p class="text-base text-gray font-normal mt-2 truncate">
+          {{ product.description }}
+        </p>
+        <div class="mt-2">
+          <app-modify-quantity
+            [quantity]="product.quantity"
+            (increment)="incrementHandler(product)"
+            (decrement)="decrementHandler(product)"
+          />
+        </div>
+        <p class="text-base mt-3">
+          {{ product.price * product.quantity | currency : "INR" }}
+        </p>
+      </div>
     </div>
+    }
   </div>
-  }
+
+  <div>
+    <app-subtotal [subTotal]="subTotal()" />
+  </div>
 </section>
 
 }

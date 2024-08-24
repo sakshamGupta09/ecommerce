@@ -1,1 +1,37 @@
-<p>subtotal works!</p>
+<section class="checkout">
+  <h1>Checkout</h1>
+
+  <div class="flex gap-2 mt-2">
+    <input type="text" placeholder="Discount code" class="flex-1" />
+    <button class="btn">Apply</button>
+  </div>
+
+  <p class="mt-2 font-normal text-sm">
+    Apply code <span class="font-medium">SAKSHAM10</span> to get 10% off
+  </p>
+
+  <h1 class="mt-6">Bill details</h1>
+
+  <div class="bill-details mt-4 font-normal text-gray text-sm">
+    <p>Item total</p>
+    <p>{{ 100 | currency : "INR" }}</p>
+
+    <p>Delivery partner fee</p>
+    <p>{{ 100 | currency : "INR" }}</p>
+
+    <p>Platform fee</p>
+    <p>{{ 100 | currency : "INR" }}</p>
+
+    <p>GST and Restaurant Charges</p>
+    <p>{{ 100 | currency : "INR" }}</p>
+  </div>
+
+  <div class="bill-details text-lg font-medium flex justify-between mt-4">
+    <p>Total:</p>
+    <p>{{ subTotal() | currency : "INR" }}</p>
+  </div>
+
+  <div class="mt-6 text-center">
+    <button class="btn">Place order</button>
+  </div>
+</section>

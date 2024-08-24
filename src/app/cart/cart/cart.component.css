@@ -1,3 +1,7 @@
+.container {
+  padding: 0 0.5rem;
+}
+
 .product {
   border: 1px solid #0000001a;
   padding: 0.25rem 0.5rem;
@@ -29,5 +33,13 @@
 @media only screen and (max-width: 600px) {
   .product__image-container {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    display: grid;
+    grid-template-columns: 60% 39%;
+    gap: 1rem;
   }
 }
