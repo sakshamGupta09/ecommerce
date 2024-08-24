@@ -1,0 +1,26 @@
+.container {
+  border: 1px solid #d4d5d9;
+  background: white;
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr 1px 1fr;
+  height: 2rem;
+}
+
+.cart-btn {
+  border: none;
+  background-color: white;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cart-btn:hover {
+  background: #d4d5d9;
+}
+
+.line {
+  height: 100%;
+  width: 1px;
+  border: 1px solid #d4d5d9;
+}

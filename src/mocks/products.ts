@@ -15,7 +15,7 @@ export const PRODUCTS: IProduct[] = [
     description: '60H Playtime | Dual Pairing',
     price: 1599,
     image: '/assets/images/earphone2.webp',
-    quantity: 1,
+    quantity: 0,
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ export const PRODUCTS: IProduct[] = [
     description: 'AMOLED Display | Diamond Dial',
     price: 4999,
     image: '/assets/images/watch3.webp',
-    quantity: 1,
+    quantity: 0,
   },
   {
     id: 4,
@@ -31,7 +31,7 @@ export const PRODUCTS: IProduct[] = [
     description: '120H Playtime | Quad Mic',
     price: 1799,
     image: '/assets/images/earphone3.webp',
-    quantity: 1,
+    quantity: 0,
   },
   {
     id: 5,
@@ -39,7 +39,7 @@ export const PRODUCTS: IProduct[] = [
     description: '500 Nits | 1.8" display',
     price: 3499,
     image: '/assets/images/watch4.webp',
-    quantity: 1,
+    quantity: 0,
   },
   {
     id: 6,
@@ -47,7 +47,7 @@ export const PRODUCTS: IProduct[] = [
     description: 'Circular Display | Noise OS',
     price: 2499,
     image: '/assets/images/watch5.webp',
-    quantity: 2,
+    quantity: 0,
   },
   {
     id: 7,
@@ -55,7 +55,7 @@ export const PRODUCTS: IProduct[] = [
     description: '50H Playtime | Quad Mic',
     price: 999,
     image: '/assets/images/earphone1.webp',
-    quantity: 1,
+    quantity: 0,
   },
   {
     id: 8,
@@ -63,6 +63,6 @@ export const PRODUCTS: IProduct[] = [
     description: 'AMOLED Display | 4G Calling',
     price: 12999,
     image: '/assets/images/watch1.webp',
-    quantity: 1,
+    quantity: 0,
   },
 ];

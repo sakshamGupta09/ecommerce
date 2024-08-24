@@ -6,8 +6,16 @@
   justify-content: space-between;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .items-center {
   align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .gap-2 {
@@ -72,6 +80,33 @@
   padding: 0.5rem;
   font-size: 1rem;
   font-weight: 500;
+  cursor: pointer;
+}
+
+.bg-black {
+  background: black;
+}
+
+.text-white {
+  color: white;
+}
+
+.w-100 {
   width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-red {
+  color: red;
+}
+
+.w-50 {
+  width: 60%;
+}
+
+.pointer {
   cursor: pointer;
 }

@@ -21,6 +21,10 @@ export class ShoppingService {
     return total;
   });
 
+  public getCartItems() {
+    return this.cartProducts;
+  }
+
   public getCartItemsCount() {
     return this.cartItemsCount;
   }
@@ -35,6 +39,7 @@ export class ShoppingService {
         return this.increaseQuantity(this.cartProducts()[i]);
       }
     }
+    product.quantity = 1;
     this.cartProducts.set([...this.cartProducts(), product]);
   }
 
@@ -44,7 +49,8 @@ export class ShoppingService {
   }
 
   public decreaseQuantity(product: IProduct): void {
-    if (product.quantity == 1) {
+    product.quantity--;
+    if (product.quantity == 0) {
       return this.removeProduct(product.id);
     }
     this.cartProducts.update((cart) => [...cart]);
