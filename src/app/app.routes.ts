@@ -2,14 +2,12 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: 'layout',
+    path: '',
     loadComponent: () =>
       import('./layout/layout/layout.component').then((m) => m.LayoutComponent),
     loadChildren: () =>
       import('./routes/application-routes').then((m) => m.APPLICATION_ROUTES),
   },
-
-  { path: '', redirectTo: '/layout/products', pathMatch: 'full' },
   {
     path: '**',
     loadComponent: () =>

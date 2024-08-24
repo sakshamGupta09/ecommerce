@@ -1,1 +1,24 @@
-<p>header works!</p>
+<header class="header flex justify-between items-center">
+  <a class="logo__container flex items-center gap-2" routerLink="/products">
+    <img
+      src="/assets/images/logo.svg"
+      width="35"
+      height="34"
+      alt="Designway Logo"
+      loading="lazy"
+    />
+    <span class="font-medium">DESIGNWAY</span>
+  </a>
+
+  <a routerLink="/cart">
+    <app-badge [count]="0">
+      <img
+        src="/assets/images/cart.svg"
+        alt="Cart icon"
+        loading="lazy"
+        width="35"
+        height="30"
+      />
+    </app-badge>
+  </a>
+</header>

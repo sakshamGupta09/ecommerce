@@ -1,0 +1,18 @@
+.badge {
+  .badge__count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -0.25rem;
+    right: -0.25rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: rgb(240 82 82);
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 100%;
+    border: 2px solid white;
+  }
+}

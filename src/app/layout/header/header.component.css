@@ -1,0 +1,14 @@
+.header {
+  position: sticky;
+  top: 0;
+  height: 3rem;
+  padding: 0.25rem 1.5rem;
+  background: #fff;
+  z-index: 1;
+  box-shadow: 0 3px 5px #00000005, 0 0 2px #0000000d, 0 1px 4px #00000014;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+a {
+  text-decoration: none;
+}
