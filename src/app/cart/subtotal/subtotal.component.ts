@@ -1,14 +1,24 @@
 import { CurrencyPipe } from '@angular/common';
-import { Component, input } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, inject, input } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
+import { ShoppingService } from '../../services/shopping.service';
 
 @Component({
   selector: 'app-subtotal',
   standalone: true,
-  imports: [CurrencyPipe, RouterLink],
+  imports: [CurrencyPipe],
   templateUrl: './subtotal.component.html',
   styleUrl: './subtotal.component.css',
 })
 export class SubtotalComponent {
   public subTotal = input.required<number>();
+
+  private service = inject(ShoppingService);
+
+  private router = inject(Router);
+
+  public placeOrderHandler(): void {
+    this.service.resetCart();
+    this.router.navigate(['/order-completed']);
+  }
 }

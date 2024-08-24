@@ -33,6 +33,10 @@ export class ShoppingService {
     return this.subtotal;
   }
 
+  public resetCart(): void {
+    this.cartProducts.set([]);
+  }
+
   public addProduct(product: IProduct): void {
     for (let i = 0; i < this.cartProducts().length; i++) {
       if (this.cartProducts()[i].id === product.id) {
