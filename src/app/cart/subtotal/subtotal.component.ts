@@ -1,5 +1,5 @@
 import { CurrencyPipe } from '@angular/common';
-import { Component, inject, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { ShoppingService } from '../../services/shopping.service';
 
@@ -9,6 +9,7 @@ import { ShoppingService } from '../../services/shopping.service';
   imports: [CurrencyPipe],
   templateUrl: './subtotal.component.html',
   styleUrl: './subtotal.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SubtotalComponent {
   public subTotal = input.required<number>();

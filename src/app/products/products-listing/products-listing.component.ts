@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, signal } from '@angular/core';
 import { IProduct } from '../../models/product';
 import { ShoppingService } from '../../services/shopping.service';
 import { ProductComponent } from '../product/product.component';
@@ -10,6 +10,7 @@ import { NoProductsComponent } from '../no-products/no-products.component';
   imports: [ProductComponent, NoProductsComponent],
   templateUrl: './products-listing.component.html',
   styleUrl: './products-listing.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductsListingComponent implements OnInit {
   public products = signal<IProduct[]>([]);

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { ShoppingService } from '../../services/shopping.service';
 import { EmptyCartComponent } from '../empty-cart/empty-cart.component';
 import { CurrencyPipe, NgTemplateOutlet } from '@angular/common';
@@ -18,6 +18,7 @@ import { SubtotalComponent } from '../subtotal/subtotal.component';
   ],
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CartComponent {
   private service = inject(ShoppingService);
